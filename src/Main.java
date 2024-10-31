@@ -20,9 +20,14 @@ public class Main implements Runnable {
         frame.setSize(SCREEN_SIZE);
         frame.setTitle(TITLE);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
+        frame.setLayout(null);
 
         rend = new Renderer(frame);
         forceList = new ForceList();
+
+        forceList.setBounds(0,0,200,580);
+        frame.add(forceList);
 
         frame.setVisible(true);
     }
